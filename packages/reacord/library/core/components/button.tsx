@@ -36,7 +36,7 @@ export function Button(props: ButtonProps) {
 }
 
 class ButtonNode extends Node<ButtonProps> {
-	private customId: ReturnType<typeof randomUUID> | `${string}` = randomUUID()
+	private customId: string = randomUUID()
 
 	// this has text children, but buttons themselves shouldn't yield text
 	// eslint-disable-next-line @typescript-eslint/class-literal-property-style

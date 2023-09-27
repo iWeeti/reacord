@@ -1,5 +1,5 @@
 {
-	"name": "reacord",
+	"name": "@weetisoft/reacord",
 	"type": "module",
 	"description": "Create interactive Discord messages using React.",
 	"version": "0.5.2",
