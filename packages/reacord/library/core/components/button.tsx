@@ -18,6 +18,7 @@ export type ButtonProps = ButtonSharedProps & {
 
 	/** Happens when a user clicks the button. */
 	onClick: (event: ButtonClickEvent) => void
+	customId?: string
 }
 
 /** @category Button */
@@ -41,6 +42,11 @@ class ButtonNode extends Node<ButtonProps> {
 	// eslint-disable-next-line @typescript-eslint/class-literal-property-style
 	override get text() {
 		return ""
+	}
+
+	constructor(props: ButtonProps) {
+		super(props);
+		this.customId = props.customId ?? this.customId
 	}
 
 	override modifyMessageOptions(options: MessageOptions): void {
